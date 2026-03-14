@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore"; // Activa la base de dades
+import { getStorage } from "firebase/storage";    // Activa el magatzem de PDFs
 
 const firebaseConfig = {
   apiKey: "AIzaSyAD6Td3-892TD1iYujo7eDPOytwps_EaYc",
@@ -13,3 +15,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const db = getFirestore(app);       // Exporta la base de dades
+export const storage = getStorage(app);    // Exporta el magatzem
